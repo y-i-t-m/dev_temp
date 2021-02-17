@@ -1,0 +1,46 @@
+version: "3.1"
+
+services:
+  wordpress:
+    build: ./
+    container_name: wp1-wordpress
+    ports:
+      - "8000:80"
+    volumes:
+      - ./html:/var/www/html
+      - ./wp-install.sh:/tmp/wp-install.sh
+    environment:
+      WORDPRESS_DB_NAME: wordpress_db
+      WORDPRESS_DB_PASSWORD: mysql_password
+    depends_on:
+      - mysql
+    restart: always
+
+  mysql:
+    image: mariadb
+    container_name: wp1-mariadb
+    ports:
+      - "3306:3306" #MacのMySQLとポートがバッティングする場合は変える 例) - "33060:3306"
+    volumes:
+      - db_mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql_password
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: wp1-phpmyadmin
+    ports:
+      - 8081:80
+    volumes:
+      - ./phpmyadmin/sessions:/sessions
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_USER=root
+      - PMA_PASSWORD=mysql_password
+    depends_on:
+      - mysql
+
+volumes:
+  db_mysql:
