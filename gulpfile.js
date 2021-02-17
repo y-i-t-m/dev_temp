@@ -71,24 +71,24 @@ const compileEjs = (done) => {
 
 
 // tailwind
-const compileCss = (done) => {
-  gulp.src(srcTailwindFiles)
-  .pipe(postcss([
-    require("tailwindcss"),
-    // require('postcss-100vh-fix'),
-    require("autoprefixer"),
-  ]))
-  .pipe(gulp.dest(destCssDir));
-  done();
-};
+// const compileCss = (done) => {
+//   gulp.src(srcTailwindFiles)
+//   .pipe(postcss([
+//     require("tailwindcss"),
+//     // require('postcss-100vh-fix'),
+//     require("autoprefixer"),
+//   ]))
+//   .pipe(gulp.dest(destCssDir));
+//   done();
+// };
 
 
 // TypeScriptをwebpackでバンドル
-const bundleWebpack = (done) => {
-  webpackStream(webpackConfig, webpack)
-  .pipe(gulp.dest(destJsDir));
-  done();
-};
+// const bundleWebpack = (done) => {
+//   webpackStream(webpackConfig, webpack)
+//   .pipe(gulp.dest(destJsDir));
+//   done();
+// };
 
 
 // リロードするhtml

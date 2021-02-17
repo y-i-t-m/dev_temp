@@ -1,5 +1,5 @@
-// const path = require('path');
-// const webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 // const settings = require(path.resolve(__dirname, 'config/settings'));
 const TerserPlugin = require('terser-webpack-plugin');
 
