@@ -6,6 +6,10 @@ const settings = {
     src: 'src/js/',
     dest: 'assets/js',
   },
+  img: {
+    src: "src/img/",
+    dest: "assets/img",
+  },
   clones: [
     {
       from: 'src/*.html',
