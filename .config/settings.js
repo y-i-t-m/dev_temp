@@ -6,9 +6,17 @@ const settings = {
     src: 'src/js/',
     dest: 'assets/js',
   },
+  json: {
+    src: 'src/json/data.json'
+  },
+  ejs: {
+    src: './src/ejs/**/*.ejs',
+    partial: '!./src/ejs/**/_*.ejs',
+    dest: DIST_PATH
+  },
   img: {
     src: "src/img/",
-    dest: "assets/img",
+    dest: "./dist/assets/img/",
   },
   clones: [
     {

@@ -4,7 +4,7 @@ const JS_LOADER = {
   loader: "babel-loader",
   // Babel のオプションを指定する
   options: {
-    "preset": [
+    "presets": [
       ["@babel/preset-env", {
         "useBuiltIns": "usage",
         "corejs": 3,
