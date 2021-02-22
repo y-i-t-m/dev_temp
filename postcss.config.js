@@ -1,10 +1,10 @@
 const path = require('path');
 const resolver = require('postcss-import-resolver');
-const objectFitImages = require('postcss-object-fit-images');
+// const objectFitImages = require('postcss-object-fit-images');
 
 module.exports = {
   plugins: {
-    objectFitImages,
+    // objectFitImages,
     'postcss-import': {
       resolve: resolver({
         alias: {

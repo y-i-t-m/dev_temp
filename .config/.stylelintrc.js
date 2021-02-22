@@ -1,5 +1,6 @@
 const IGNORE_FILES = [
   "../dist/**",
+  "../src/styles/config/**"
 ];
 
 //自動修正
