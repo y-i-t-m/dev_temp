@@ -1,8 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const settings = require(path.resolve(__dirname, '.config/settings'));
-// const TerserPlugin = require('terser-webpack-plugin');
-// const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
@@ -50,44 +48,4 @@ module.exports = () => {
       ]
     ],
   }
-
 }
-// module.exports = {
-//   mode: 'production', // development or production
-//   entry: './src/js/main.js',
-//   output: {
-//     path: `${__dirname}/dest/assets/js`,
-//     filename: "main.js",
-//     // library: ['com', 'example'],
-//     // libraryTarget: 'umd'
-//   },
-//   optimization: {
-//     minimizer: [new TerserPlugin()],
-//   },
-//   module: {
-//     rules: [
-//       {
-//         test: /\.js$/,
-//         exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
-//         use: [
-//           {
-//             // Babel を利用する
-//             loader: "babel-loader",
-//             // Babel のオプションを指定する
-//             options: {
-//               presets: [
-//                 // プリセットを指定することで、ES2020 を ES5 に変換
-//                 "@babel/preset-env",
-//                 {
-//                   "useBuildIns": "usage",
-//                   "corejs": 3
-//                 }
-//               ],
-//             },
-//           },
-//         ],
-//       },
-//     ],
-//   },
-//   target: ['web', 'es5'],
-// };

@@ -7,4 +7,50 @@ const param = {
 %>
 <%- include(`${param.path}@include/_header`, {param: param}); %>
 <h1>あああ</h1>
+
+<% const boxes1 = [
+    {
+        heading: "一般的な賃貸住宅との違いは？",
+        content: "24時間、365日の管理と緊急通報装置の設置による緊急時の対応。有資格者による健康や介護についてのご相談から、転倒やつまづきを防止するバリアフリー設計まで、ご入居者様に安心して暮らしていただけるサービスと設備をご用意しております。"
+    }, {
+        heading: "他に何かかかる費用はありますか？",
+        content: "「グレイズメゾン御幸」で行えるサービスや費用は<a href='../price' class='text-main inline-block'>「<span class='underline'>ご利用料金</span>」</a>の通りです。<br>ただし、それ以外にご入居様が利用される「介護保険費」「医療保険費」に自己負担分は各自でのお支払いとなります。"
+    }, {
+        heading: "入院になった場合は退去しなければいけませんか？",
+        content: "いえ、入院となっても退去の必要はありませんので、ご安心ください。<br>ただし、入院中も賃料・共益費・状況把握および生活相談サービスの費用はご負担いただきます。予めご了承ください。"
+    }, {
+        heading: "各種サービスに介護保険は使えませんか？",
+        content: "サービス付き高齢者向け住宅はあくまで“住宅”であり、“介護施設”とは異なります。ですので、サービス付き高齢者向け住宅が主だって行うサービスには介護保険は適用されません。介護の必要な方は、訪問ヘルパーなどの外部の介護保険サービスをお使いいただき、生活のフォローをしていただいてます。"
+    }, {
+        heading: "広島市外からこちらに転居されてくる方はいますか？",
+        content: "県外や市外を問わず、特に制限なくご入居いただいております。ただ、介護保険による外部サービスを利用される場合に、介護保険証の住所地が広島市内でないと受けることができない介護サービスもございますので、予めお問い合わせください。"
+    }, {
+        heading: "退去要件を教えてください。",
+        content: "集合住宅における禁止行為（例：大声をあげる、他の方の居室に勝手に立ち入りをする）が続くようでしたら、ご退去となる場合がございます。"
+    }, {
+        heading: "お風呂は自由に入れますか？",
+        content: "予め入浴のご予約をお取りいただきます。それにあわせて当住宅のスタッフが湯はりと清掃を行いますので、皆様は時間内にご入浴ください。なお、入浴介助は当住宅サービスに含まれておりませんので、ご注意ください。"
+    }, {
+        heading: "イベントなどはありますか？",
+        content: "定期的なイベント、平日、休日と入居者様向けのイベントを適宜行っております。外部講師を招いての講座やコンサートも行っております。"
+    }, {
+        heading: "外出に決まりはありますか？",
+        content: "外出は「原則自由で24時間いつでも可能」です。ただ、外出時には事務所で行き先等をお伝えいただいてから外出していただく仕組みになっております。"
+    }, {
+        heading: "食事を自由にとりたいのですが…。",
+        content: "締め切りまでにご連絡いただければキャンセル料はかかりません。1食のみ召し上がられている方、すべて自炊されている方など様々いらっしゃいますので、お気軽にご相談ください。"
+    }
+]; %>
+<% boxes1.forEach(box1 => { %>
+<li itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="pt-12">
+    <div itemprop="name" class="text-xl font-bold"><span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-solid border-main text-main text-xl tracking-normal leading-none mr-4"><span
+                    class="ml-1 -mt-1">Q.</span></span><%- box1.heading %></div>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text" class="text-tiny leading-loose mt-1">
+            <%- box1.content %>
+        </p>
+    </div>
+</li>
+<% }); %>
 <%- include(`${param.path}@include/_footer`, {param: param}); %>

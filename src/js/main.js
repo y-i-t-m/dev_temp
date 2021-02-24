@@ -7,4 +7,3 @@ import "picturefill";
 import objectFitImages from 'object-fit-images';
 
 objectFitImages();
-

@@ -1,0 +1,11 @@
+<%
+const param = {
+    title: 'アバウト',
+    path: '../',
+    description: "説明が入ります。"
+}
+%>
+<%- include(`${param.path}@include/_header`, {param: param}); %>
+<h1>アバウト</h1>
+
+<%- include(`${param.path}@include/_footer`, {param: param}); %>
