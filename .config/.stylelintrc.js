@@ -1,6 +1,9 @@
 const IGNORE_FILES = [
   "../dist/**",
-  "../src/styles/config/**"
+  "../src/styles/config/**",
+  "../src/styles/_reset.css",
+  "../src/styles/_common.css",
+  "../src/styles/mixins/**"
 ];
 
 //自動修正

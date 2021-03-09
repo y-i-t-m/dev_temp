@@ -1,6 +1,5 @@
 const path = require('path');
 const resolver = require('postcss-import-resolver');
-// const objectFitImages = require('postcss-object-fit-images');
 
 module.exports = {
   plugins: {
@@ -13,7 +12,11 @@ module.exports = {
       }),
     },
     "postcss-nested": {},
+    // "postcss-simple-vars": {},
+    "postcss-mixins":{},
+    "postcss-object-fit-images": {},
     tailwindcss: {},
     autoprefixer: {},
+    // "cssnano": {},
   },
 };

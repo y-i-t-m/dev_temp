@@ -1,2 +1,12 @@
-@import './config/_reset.css';
-/*@import './config/_about.css';*/
+@import './mixins/_triangle.css';
+
+@import './config/_font.css';
+@import './config/_color.css';
+@import './_reset.css';
+@import './config/_other.css';
+
+img {
+  object-fit: cover;
+  margin-top: 20px;
+  @mixin triangle top 12px 12px #333;
+}

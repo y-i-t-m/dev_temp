@@ -38,14 +38,14 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 body {
-  font-family: 'Noto Serif JP', serif;
+  font-family: $base-font;
   font-size: 1rem;
   line-height: 1.5;
-  color: #333;
+  color: $base-txt;
   text-align: left;
   letter-spacing: .05em;
+  background-color: $base-bg;
 }
 
 /*// aタグをinline要素で使うことが無いので、blockにする。*/
